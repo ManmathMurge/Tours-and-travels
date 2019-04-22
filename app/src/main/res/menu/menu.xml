@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/mybooking"
+            android:title="My Booking"
+           />
+        <item
+            android:id="@+id/payment"
+            android:title="Payment"
+        />
+
+        <item
+            android:id="@+id/servises"
+            android:title="Special Services"
+            />
+        <item
+            android:id="@+id/enquiry"
+            android:title="Enquiry"
+            />
+
+        <item
+            android:id="@+id/feedback"
+            android:title="Feedback"
+            />
+        <item
+            android:id="@+id/contact_us"
+            android:title="Contact Us"
+            />
+        <item
+            android:id="@+id/sign_out"
+            android:title="Sign Out"
+            />
+
+    </group>
+
+
+
+
+</menu>

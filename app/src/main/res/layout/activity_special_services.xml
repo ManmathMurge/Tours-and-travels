@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ede9e9"
+    tools:context=".SpecialServices">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#FF578387 "
+        android:id="@+id/toolbar"
+        app:titleTextColor="#FFFFFF"
+        app:title="Customer Services"
+        />
+   <Button
+       android:id="@+id/corporateservice"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="Corporate Service"
+       android:textSize="20sp"
+       android:layout_gravity="center"
+       android:padding="15dp"
+       android:layout_marginTop="50dp"
+       android:layout_marginLeft="20dp"
+       android:layout_marginRight="20dp"/>
+    <Button
+        android:id="@+id/punetoaurgaservice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pune to Aurangabad Service"
+        android:textSize="20sp"
+        android:padding="15dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+    <Button
+        android:id="@+id/dailyservice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Daily Service"
+        android:textSize="20sp"
+        android:padding="15dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+</LinearLayout>

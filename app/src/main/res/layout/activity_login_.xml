@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#d4cece"
+    tools:context=".Login_Activity">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#FF578387"
+        android:id="@+id/toolbar"
+        app:title="Login"
+        app:titleTextColor="#FFFFFF"
+      >
+
+    </android.support.v7.widget.Toolbar>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/imageview"
+        android:src="@mipmap/download"
+        android:layout_marginTop="2dp"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        >
+
+        <ImageView
+            android:id="@+id/img_username"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_username"/>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:hint="User Name"
+        android:lines="1"
+            android:inputType="textEmailAddress"
+        android:tooltipText="Enter User Id"/>
+
+</android.support.design.widget.TextInputLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        >
+        <ImageView
+            android:id="@+id/img_password"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_password"
+            />
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true">
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:lines="1"
+                android:inputType="textPassword"
+                android:layout_marginLeft="10dp"
+                android:tooltipText="Enter User Password"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/sign_in"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="sign in"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New User?"
+            android:textSize="15dp"
+            android:layout_marginLeft="115dp"
+            />
+        <TextView
+            android:id="@+id/sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="SIGN UP"
+            android:textSize="15dp"
+            android:tooltipText="Click On New Registration"
+            android:textColor="#2e86c1"/>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/forgot_passsword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:text="Forgot Password"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:textColor="#2e86c1"/>
+
+
+</LinearLayout>

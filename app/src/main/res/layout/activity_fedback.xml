@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ede9e9"
+    tools:context=".Fedback">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#FF578387 "
+        android:id="@+id/toolbar"
+        app:titleTextColor="#FFFFFF"
+        app:title="Feedback"
+        />
+<android.support.design.widget.TextInputLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter The Email"
+        android:layout_marginTop="15dp"
+        android:id="@+id/feedback_email"
+        android:lines="1"
+        android:inputType="textEmailAddress"
+        />
+</android.support.design.widget.TextInputLayout>
+
+<android.support.design.widget.TextInputLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <EditText
+        android:id="@+id/feedback_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:inputType="textMultiLine"
+        android:hint="Message"
+        android:lines="4"
+        android:minLines="6"
+        android:scrollbars="vertical"
+
+        />
+
+</android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/feedback_button"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:gravity="center"/>
+
+</LinearLayout>

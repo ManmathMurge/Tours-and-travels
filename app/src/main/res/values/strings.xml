@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">TravelGiri</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string-array name="city">
+        <item>select</item>
+        <item>Aurangabad</item>
+        <item>Baba Petrolpump</item>
+        <item>Nagar</item>
+        <item>Pune</item>
+    </string-array>
+
+    <string-array name="passanger">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <string-array name="vehiletype">
+        <item>select</item>
+        <item>Enova</item>
+        <item>Swift D-zire</item>
+        <item>Swift</item>
+        <item>Idica</item>
+        <item>Sumo</item>
+        <item>kwid</item>
+        <item>Hundai</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

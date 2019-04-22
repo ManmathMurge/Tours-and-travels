@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ede9e9"
+    tools:context=".Enquiry">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#FF578387 "
+        android:id="@+id/toolbar"
+        app:titleTextColor="#FFFFFF"
+        app:title="Enquiry"
+
+        />
+<android.support.design.widget.TextInputLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="15dp">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/enquiry_name"
+        android:layout_marginTop="5dp"
+        android:hint="Enter Name"
+        android:lines="1"
+        />
+</android.support.design.widget.TextInputLayout>
+       <android.support.design.widget.TextInputLayout
+           android:layout_width="match_parent"
+           android:layout_marginLeft="10dp"
+           android:layout_height="wrap_content">
+           <EditText
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:id="@+id/enquiry_email"
+               android:layout_marginTop="15dp"
+               android:hint="Enter Email"
+               android:lines="1"
+               android:inputType="textEmailAddress"/>
+       </android.support.design.widget.TextInputLayout>
+       <android.support.design.widget.TextInputLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="10dp">
+           <EditText
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:id="@+id/enquiry_contact"
+               android:layout_marginTop="15dp"
+               android:hint="Enter Contact"
+               android:lines="1"
+               android:inputType="number"
+               />
+       </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:padding="4dp">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/enquiry_text"
+                android:layout_marginTop="15dp"
+                android:padding="4dp"
+                android:hint="Message"
+                android:lines="4"
+                android:minLines="6"
+                android:scrollbars="vertical"
+                android:inputType="textMultiLine"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/enqiry_button"
+            android:text="Submit"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"/>
+
+
+
+</LinearLayout>
