@@ -43,8 +43,7 @@ public class ViewVehicleAdapter extends RecyclerView.Adapter<ViewVehicleAdapter.
         recyclerViewHolder.vsource.setText(vehicleDetails1.getSourse());
         recyclerViewHolder.vdestiation.setText(vehicleDetails1.getDestination());
         recyclerViewHolder.Fare.setText(vehicleDetails1.getNoOfSeat());
-        Picasso.with(context).load("http://"+vehicleDetails1.getVPhoto()).into(recyclerViewHolder.imageView);
-
+        Picasso.with(context).load(vehicleDetails1.getVPhoto()).into(recyclerViewHolder.imageView);
 
     }
 

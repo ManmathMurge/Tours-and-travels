@@ -19,6 +19,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.sachin.giristourstravels.ModuleClass.Destination;
 import com.example.sachin.giristourstravels.ModuleClass.Source;
@@ -55,26 +56,26 @@ public class Tab1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.fragment_tab1, container, false);
+        View view = inflater.inflate(R.layout.fragment_tab1, container, false);
 
-        Sourse=view.findViewById(R.id.source);
-        Destination=view.findViewById(R.id.destination);
-        Date=view.findViewById(R.id.search_date);
-        vsearch=view.findViewById(R.id.vehiclesearch);
+        Sourse = view.findViewById(R.id.source);
+        Destination = view.findViewById(R.id.destination);
+        Date = view.findViewById(R.id.search_date);
+        vsearch = view.findViewById(R.id.vehiclesearch);
 
-       vsearch.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-               if (validate()) {
-                   Intent intent=new Intent(getActivity(),vehicle_list.class);
-                   getActivity().startActivity(intent);
-
-
-               }
+        vsearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (validate()) {
+                    Intent intent = new Intent(getActivity(), vehicle_list.class);
+                    getActivity().startActivity(intent);
 
 
-           }
-       });
+                }
+
+
+            }
+        });
 
         creatSource();
         creatDestination();
@@ -85,23 +86,23 @@ public class Tab1 extends Fragment {
             public void onClick(View v) {
 
 
-                Calendar calendar=Calendar.getInstance();
-                int year=calendar.get(Calendar.YEAR);
-                int month=calendar.get(Calendar.MONTH);
-                int day=calendar.get(Calendar.DAY_OF_MONTH);
+                Calendar calendar = Calendar.getInstance();
+                int year = calendar.get(Calendar.YEAR);
+                int month = calendar.get(Calendar.MONTH);
+                int day = calendar.get(Calendar.DAY_OF_MONTH);
 
-                DatePickerDialog dialog=new DatePickerDialog(getContext(),Tab1.this.datesetListener,year,month,day);
+                DatePickerDialog dialog = new DatePickerDialog(getContext(), Tab1.this.datesetListener, year, month, day);
 //                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                 dialog.show();
             }
-      });
-        datesetListener= new DatePickerDialog.OnDateSetListener() {
+        });
+        datesetListener = new DatePickerDialog.OnDateSetListener() {
 
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                month=month+1;
+                month = month + 1;
                 // Log.d(TAG,"onDataSet: dd/mm/yyyy: " +dayOfMonth+"/" +month+"/"+year);
-                String date=dayOfMonth+"/"+month+"/"+year;
+                String date = dayOfMonth + "/" + month + "/" + year;
                 Date.setText(date);
             }
         };
@@ -112,13 +113,13 @@ public class Tab1 extends Fragment {
 
     private boolean validate() {
         //just to highlight that this is an error
-        if (Sourse.getSelectedItem().toString().equals(Destination.getSelectedItem().toString())){
-            TextView errorText = (TextView)Destination.getSelectedView();
+        if (Sourse.getSelectedItem().toString().equals(Destination.getSelectedItem().toString())) {
+            TextView errorText = (TextView) Destination.getSelectedView();
             errorText.setTextColor(Color.RED);
             errorText.setError("Destination");
             errorText.setText("Select Destination");
             return false;
-        }else {
+        } else {
 
             return true;
         }
@@ -160,7 +161,7 @@ public class Tab1 extends Fragment {
 
             @Override
             public void onFailure(Call<List<Source>> call, Throwable t) {
-
+                Toast.makeText(context, "" + t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
 

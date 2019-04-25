@@ -11,25 +11,25 @@ import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 public interface CustomerApi {
-    @GET("registration.php")
+    @GET("travelgiri/registration.php")
     public Call<String> getAllCustomers(@Query("name") String name, @Query("email") String email, @Query("contact") String contact, @Query("password") String password);
 
-    @GET("login.php")
+    @GET("travelgiri/login.php")
     public Call<String> loginAllCustomers(@Query("email") String email, @Query("password") String password);
 
-    @GET("enquiry.php")
+    @GET("travelgiri/enquiry.php")
     public Call<String> enquiryAllCustomers(@Query("name") String name, @Query("email") String email, @Query("contact") String contact, @Query("message") String message);
 
-    @GET("feedback.php")
+    @GET("travelgiri/feedback.php")
     public Call<String> feedbackAllCustomers(@Query("email") String email, @Query("message") String message);
 
-    @GET("vehiclelist.php")
+    @GET("travelgiri/vehiclelist.php")
     public Call<List<Vehicle_Details>> viewVehicle();
 
-    @GET("spinnersource.php")
+    @GET("travelgiri/spinnersource.php")
     public Call<List<Source>>sources();
 
-    @GET("spinnerdestination.php")
+    @GET("travelgiri/spinnerdestination.php")
     public Call<List<Destination>> destination();
 
 }

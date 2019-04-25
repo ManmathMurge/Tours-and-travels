@@ -95,7 +95,7 @@ public class User_Sign_Up extends AppCompatActivity implements View.OnClickListe
 
                 @Override
                 public void onFailure(Call<String> call, Throwable t) {
-                    // Toast.makeText(getApplicationContext(), t.getMessage(), Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getApplicationContext(), t.getMessage(), Toast.LENGTH_SHORT).show();
                 }
             });
 

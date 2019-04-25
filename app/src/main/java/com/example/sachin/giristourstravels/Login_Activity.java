@@ -41,6 +41,7 @@ public class Login_Activity extends AppCompatActivity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_);
+
         userName = findViewById(R.id.username);
         Password = findViewById(R.id.password);
         signup = findViewById(R.id.sign_up);
@@ -79,12 +80,11 @@ public class Login_Activity extends AppCompatActivity implements View.OnClickLis
                         Password.setText("");
 
                         if (response.isSuccessful()) {
-                            SharedPreferencesUtility.savePrefBoolean(Login_Activity.this, Commans.LOGIN_STATUS, true);
+                           SharedPreferencesUtility.savePrefBoolean(Login_Activity.this, Commans.LOGIN_STATUS, true);
                             Intent i = new Intent(Login_Activity.this, Home_Activity.class);
                             SharedPreferences sharedPreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
                             String email = userName.getText().toString();
                             String password = Password.getText().toString();
-
                             SharedPreferences.Editor editor = sharedPreferences.edit();
                             editor.putString(email, email);
                             editor.putString(password, password);
@@ -92,7 +92,7 @@ public class Login_Activity extends AppCompatActivity implements View.OnClickLis
 
                             startActivity(i);
                             finish();
-                            // signin.setText("code:" +response.code());
+                            signin.setText("code:" +response.code());
 
 
                             return;

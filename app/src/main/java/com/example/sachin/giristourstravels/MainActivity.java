@@ -15,18 +15,19 @@ import com.example.sachin.giristourstravels.comman.SharedPreferencesUtility;
 public class MainActivity extends AppCompatActivity {
 private static int SPLASH_TIME_OUT=3000;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-               // SharedPreferences sharedPreferences=getSharedPreferences(Login_Activity.MyPREFERENCES, Context.MODE_PRIVATE);
+                SharedPreferences sharedPreferences=getSharedPreferences(Login_Activity.MyPREFERENCES, Context.MODE_PRIVATE);
 
                 if(SharedPreferencesUtility.getPrefBoolean(MainActivity.this, Commans.LOGIN_STATUS)) {
                     Intent intent = new Intent(getBaseContext(), Home_Activity.class);
@@ -38,9 +39,8 @@ private static int SPLASH_TIME_OUT=3000;
                     finish();
                     startActivity(intent);
                 }
-              /*  Intent intent=new Intent(MainActivity.this,Login_Activity.class);
-                startActivity(intent);
-                finish();*/
+
+
             }
         },SPLASH_TIME_OUT);
     }

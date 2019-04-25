@@ -13,20 +13,23 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.sachin.giristourstravels.comman.Commans;
 import com.example.sachin.giristourstravels.comman.SharedPreferencesUtility;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class Home_Activity extends AppCompatActivity implements Tab1.OnFragmentInteractionListner,Tab2.OnFragmentInteractionListner {
     private DrawerLayout drawerLayout;
     private TabLayout tabLayout;
     private ViewPager viewPager;
+
 
 
         @Override
@@ -43,6 +46,7 @@ public class Home_Activity extends AppCompatActivity implements Tab1.OnFragmentI
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setHomeAsUpIndicator(R.drawable.ic_menu);
+
         //Navigation Drawer
         NavigationView navigationView = findViewById(R.id.navigation_view);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -79,11 +83,10 @@ public class Home_Activity extends AppCompatActivity implements Tab1.OnFragmentI
                     drawerLayout.closeDrawers();
                 }
                 if(menuItem.getItemId()==R.id.sign_out){
-                    SharedPreferencesUtility.savePrefBoolean(Home_Activity.this, Commans.LOGIN_STATUS, false);
-                    Intent intent = new Intent(Home_Activity.this,Login_Activity.class);
+                   SharedPreferencesUtility.savePrefBoolean(Home_Activity.this, Commans.LOGIN_STATUS, false);
+                   Intent intent = new Intent(Home_Activity.this,Login_Activity.class);
                     startActivity(intent);
                     finish();
-                    drawerLayout.closeDrawers();
                 }
 
 
