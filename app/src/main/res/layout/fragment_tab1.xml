@@ -72,6 +72,7 @@
             android:layout_marginTop="5dp"
             android:hint="DD/MM/YYYY"
             android:lines="1"
+            android:maxLines="1"
             />
     </android.support.design.widget.TextInputLayout>
 

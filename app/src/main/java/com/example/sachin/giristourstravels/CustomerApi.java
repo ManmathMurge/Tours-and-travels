@@ -23,8 +23,8 @@ public interface CustomerApi {
     @GET("travelgiri/feedback.php")
     public Call<String> feedbackAllCustomers(@Query("email") String email, @Query("message") String message);
 
-    @GET("travelgiri/vehiclelist.php")
-    public Call<List<Vehicle_Details>> viewVehicle();
+    @GET("travelgiri/selectroute.php")
+    public Call<List<Vehicle_Details>> viewVehicle(@Query("sourse") String sourse, @Query("destination") String destination);
 
     @GET("travelgiri/spinnersource.php")
     public Call<List<Source>>sources();
